@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../Stylesheets/Dashboard.css"
+            xmlns="http://javafx.com/javafx/16" fx:controller="KONIG.CENTRAL.CONTROLLERS.CTRL_Dashboard">
+   <children>
+      <ScrollPane layoutY="50.0" prefHeight="718.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <content>
+            <StackPane fx:id="StackP_Parent" prefHeight="900.0" prefWidth="1360.0">
+               <children>
+                  <JFXDrawer fx:id="sideMenu" defaultDrawerSize="180.0" prefHeight="900.0" prefWidth="0.0"/>
+                  <Pane fx:id="pane_AccountsPayable" prefHeight="900.0" prefWidth="1360.0"
+                        styleClass="acctspayablepane--color" stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane fx:id="pane_accountspayable" prefHeight="716.0" prefWidth="1366.0"
+                                    styleClass="mainpane--color" stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="AP_txt_InvNo" layoutX="75.0" layoutY="139.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="109.0" prefHeight="30.0" prefWidth="94.0"
+                                     text="Invoice number">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AP_txt_SupName" layoutX="75.0" layoutY="219.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="189.0" prefHeight="30.0" prefWidth="88.0"
+                                     text="Supplier name">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="269.0" prefHeight="30.0" prefWidth="76.0"
+                                     text="Description">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="349.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Invoice amount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="497.0" prefHeight="30.0" prefWidth="61.0" text="Due date">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AP_txt_Description" layoutX="75.0" layoutY="299.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="AP_txt_InvAmount" layoutX="75.0" layoutY="379.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <DatePicker fx:id="AP_date_DueDate" layoutX="75.0" layoutY="527.0" prefHeight="25.0"
+                                          prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                          stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label layoutX="75.0" layoutY="23.0" prefHeight="62.0" prefWidth="463.0"
+                                     styleClass="heading--lbls" stylesheets="@../Stylesheets/Dashboard.css"
+                                     text="Accounts Payable">
+                                 <font>
+                                    <Font name="Futura" size="49.0"/>
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="594.0"
+                                         onAction="#create_AccountsPayable" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Create">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="75.0" layoutY="429.0" prefHeight="30.0" prefWidth="96.0" text="Discount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AP_txt_Discount" layoutX="75.0" layoutY="459.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TableView fx:id="AP_TableView" layoutX="501.0" layoutY="117.0" prefHeight="448.0"
+                                         prefWidth="818.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="716.0" prefHeight="184.0" prefWidth="1366.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_ParentCR" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane fx:id="pane_CashReceipts" prefHeight="706.0" prefWidth="1368.0"
+                                    styleClass="mainpane--color" stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="CR_txt_RecNo" disable="true" layoutX="80.0" layoutY="170.0"
+                                         prefHeight="27.0" prefWidth="180.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="80.0" layoutY="327.0" prefHeight="30.0" prefWidth="76.0"
+                                     text="Description">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="487.0" prefHeight="30.0" prefWidth="112.0"
+                                     text="Discount given">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CR_txt_Descp" layoutX="80.0" layoutY="357.0" prefHeight="27.0"
+                                         prefWidth="382.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="CR_txt_CashRec" layoutX="80.0" layoutY="437.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXComboBox fx:id="CR_cbo_ARClient" disable="true" layoutX="280.0" layoutY="277.0"
+                                           prefHeight="25.0" prefWidth="180.0"/>
+                              <TextField fx:id="CR_txt_DiscGiven" layoutX="80.0" layoutY="517.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXButton buttonType="RAISED" layoutX="266.0" layoutY="600.0"
+                                         onAction="#create_CashReceipts" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Create">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox fx:id="CR_cbo_ARinv" disable="true" layoutX="280.0" layoutY="171.0"
+                                           prefHeight="25.0" prefWidth="180.0"/>
+                              <JFXRadioButton fx:id="CR_rad_NewReceipt" layoutX="80.0" layoutY="136.0"
+                                              onAction="#CR_toggle_NewReceipt" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="New Receipt">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="CR_rad_ARInv" layoutX="280.0" layoutY="136.0"
+                                              onAction="#CR_toggle_AR_Invoice" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="AR Invoice">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <TextField fx:id="CR_txt_NewClient" disable="true" layoutX="82.0" layoutY="277.0"
+                                         prefWidth="180.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXRadioButton fx:id="CR_rad_NewClient" layoutX="80.0" layoutY="246.0"
+                                              onAction="#CR_toggle_NewClient" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="New Client">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="CR_rad_ARClient" layoutX="278.0" layoutY="246.0"
+                                              onAction="#CR_toggle_AR_Client" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="AR Client">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <TableView fx:id="CR_TableView" layoutX="541.0" layoutY="78.0" prefHeight="497.0"
+                                         prefWidth="772.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label fx:id="CR_lbl_InvBalance" layoutX="171.0" layoutY="416.0" prefHeight="15.0"
+                                     prefWidth="188.0" styleClass="cashpaymentspane__lblInvBalance"
+                                     stylesheets="@../Stylesheets/Dashboard.css" visible="false">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="408.0" prefHeight="30.0" prefWidth="90.0"
+                                     text="Cash received">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="209.0" prefHeight="30.0" prefWidth="76.0" text="Clients">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="98.0" prefHeight="30.0" prefWidth="103.0"
+                                     text="Invoice number">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="Cash Receipts">
+                                 <font>
+                                    <Font name="Futura" size="48.0"/>
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="706.0" prefHeight="194.0" prefWidth="1366.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="GL_Parent" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="698.0" prefWidth="1368.0" styleClass="mainpane--color"
+                                    stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TableView fx:id="GL_Tableview" layoutX="289.0" layoutY="122.0" prefHeight="528.0"
+                                         prefWidth="1043.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="General Ledger">
+                                 <font>
+                                    <Font name="Futura" size="48.0"/>
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="682.0" prefHeight="202.0" prefWidth="1368.0" styleClass="bottompane"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_AmortizationSchedule" prefHeight="900.0" prefWidth="1360.0"
+                        styleClass="mainpane--color" stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="708.0" prefWidth="1368.0">
+                           <children>
+                              <TextField fx:id="ASG_txt_Interest" layoutX="75.0" layoutY="299.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="Amortization Schedule Generator">
+                                 <font>
+                                    <Font name="Futura" size="48.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ASG_txt_LoanAmt" layoutX="75.0" layoutY="229.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ASG_txt_ExtraPayments" layoutX="75.0" layoutY="439.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ASG_txt_LoanPeriod" layoutX="75.0" layoutY="369.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="199.0" prefHeight="30.0" text="Loan Amount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="78.0" layoutY="269.0" prefHeight="30.0" text="Annual Interest rate in %">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="339.0" prefHeight="30.0" text="Loan period in months">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="409.0" prefHeight="30.0" text="Extra payment per month">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="76.0" layoutY="479.0" prefHeight="30.0" text="Start date of loan">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="428.0" layoutY="107.0" prefHeight="24.0" prefWidth="170.0"
+                                     styleClass="heading--lbls" stylesheets="@../Stylesheets/Dashboard.css"
+                                     text="Payment Summary :" textFill="#e6cb00">
+                                 <font>
+                                    <Font name="Futura" size="18.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="428.0" layoutY="147.0" text="Scheduled Payment :">
+                                 <font>
+                                    <Font size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="428.0" layoutY="176.0" text="Number of payments :">
+                                 <font>
+                                    <Font size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="824.0" layoutY="147.0" text="Total Early payments :">
+                                 <font>
+                                    <Font size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="824.0" layoutY="177.0" text="Total Interest :">
+                                 <font>
+                                    <Font size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label fx:id="ASG_lbl_SchedPayment" layoutX="589.0" layoutY="146.0" prefHeight="17.0"
+                                     prefWidth="180.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" textFill="#e6cb00">
+                                 <font>
+                                    <Font name="Futura" size="16.0"/>
+                                 </font>
+                              </Label>
+                              <Label fx:id="ASG_lbl_NoOfPayments" layoutX="589.0" layoutY="176.0" prefHeight="17.0"
+                                     prefWidth="180.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" textFill="#e6cb00">
+                                 <font>
+                                    <Font name="Futura" size="16.0"/>
+                                 </font>
+                              </Label>
+                              <Label fx:id="ASG_lbl_TotalEarly" layoutX="974.0" layoutY="146.0" prefHeight="17.0"
+                                     prefWidth="180.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" textFill="#e6cb00">
+                                 <font>
+                                    <Font name="Futura" size="16.0"/>
+                                 </font>
+                              </Label>
+                              <Label fx:id="ASG_lbl_TotalIntrst" layoutX="974.0" layoutY="175.0" prefHeight="17.0"
+                                     prefWidth="180.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" textFill="#e6cb00">
+                                 <font>
+                                    <Font name="Futura" size="16.0"/>
+                                 </font>
+                              </Label>
+                              <TableView fx:id="ASG_TableView" layoutX="412.0" layoutY="211.0" prefHeight="459.0"
+                                         prefWidth="921.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <DatePicker fx:id="ASG_date_StartDate" layoutX="75.0" layoutY="509.0" prefHeight="25.0"
+                                          prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                          stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <JFXButton buttonType="RAISED" layoutX="111.0" layoutY="618.0"
+                                         onAction="#Generate_Amortization_Schedule" prefHeight="17.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Generate">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="16.0"/>
+                                 </font>
+                              </JFXButton>
+                              <JFXToggleButton fx:id="tgl_SaveToDir" layoutX="63.0" layoutY="550.0"
+                                               onAction="#Save_to_Loans_Directory" text="Save To Loans Directoy"/>
+                              <Label layoutX="299.0" layoutY="571.0"/>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="708.0" prefHeight="192.0" prefWidth="1368.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_Cash" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="716.0" prefWidth="1368.0" styleClass="panecash"
+                                    stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="CASH_txt_Source" layoutX="75.0" layoutY="227.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="197.0" prefHeight="30.0" prefWidth="88.0" text="Source">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="277.0" prefHeight="30.0" prefWidth="76.0" text="Details">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="357.0" prefHeight="30.0" prefWidth="96.0" text="Amount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CASH_txt_Details" layoutX="75.0" layoutY="307.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="CASH_txt_Amount" layoutX="75.0" layoutY="387.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TableView fx:id="CASH_tableview" layoutX="444.0" layoutY="83.0" prefHeight="562.0"
+                                         prefWidth="857.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="Cash Account">
+                                 <font>
+                                    <Font name="Futura" size="50.0"/>
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="106.0" layoutY="515.0"
+                                         onAction="#create_CashEntry" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Create">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="716.0" prefHeight="194.0" prefWidth="1366.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_AccountsReceivable" prefHeight="900.0" prefWidth="1360.0"
+                        styleClass="pane-accountsreceivable" stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <Pane prefHeight="716.0" prefWidth="1368.0" styleClass="pane-accountsreceivable"
+                              stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="AR_txt_InvNo" layoutX="75.0" layoutY="149.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="119.0" prefHeight="30.0" prefWidth="94.0"
+                                     text="Invoice number">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AR_txt_CustName" layoutX="75.0" layoutY="229.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="199.0" prefHeight="30.0" prefWidth="107.0"
+                                     text="Customer name">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="279.0" prefHeight="30.0" prefWidth="76.0"
+                                     text="Description">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="359.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Invoice amount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="519.0" prefHeight="30.0" prefWidth="61.0" text="Due date">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="12.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AR_txt_Description" layoutX="75.0" layoutY="309.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="AR_txt_InvAmount" layoutX="75.0" layoutY="389.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <DatePicker fx:id="AR_date_DueDate" layoutX="75.0" layoutY="549.0" prefHeight="25.0"
+                                          prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                          stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <JFXButton buttonType="RAISED" layoutX="121.0" layoutY="625.0"
+                                         onAction="#create_AccountsReceivable" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Create">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="75.0" layoutY="439.0" prefHeight="30.0" prefWidth="96.0" text="Discount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AR_txt_Discount" layoutX="75.0" layoutY="469.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TableView fx:id="AR_TableView" layoutX="446.0" layoutY="140.0" prefHeight="448.0"
+                                         prefWidth="842.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="Accounts Receivable">
+                                 <font>
+                                    <Font name="Futura" size="49.0"/>
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <AnchorPane layoutY="716.0" prefHeight="194.0" prefWidth="1368.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_Inventory" prefHeight="900.0" prefWidth="1368.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="698.0" prefWidth="1368.0" styleClass="mainpane--color"
+                                    stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="INV_ItemName" layoutX="75.0" layoutY="135.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="INV_CurrQuantity" layoutX="485.0" layoutY="135.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="INV_CatalogueID" layoutX="75.0" layoutY="200.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="23.0" prefHeight="62.0" prefWidth="463.0"
+                                     styleClass="heading--lbls" stylesheets="@../Stylesheets/Dashboard.css"
+                                     text="Inventory">
+                                 <font>
+                                    <Font name="Futura" size="49.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="INV_StockingPrice" layoutX="485.0" layoutY="200.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="112.0" prefHeight="30.0" prefWidth="96.0" text="Item Name">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="176.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Catalogue ID">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="485.0" layoutY="112.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Current Quantity">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="485.0" layoutY="176.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Stocking Price">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TableView fx:id="INV_Tableview" layoutX="61.0" layoutY="333.0" prefHeight="320.0"
+                                         prefWidth="1247.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <JFXButton buttonType="RAISED" layoutX="934.0" layoutY="220.0"
+                                         onAction="#Save_InventoryEntry" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Save">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <TextField fx:id="INV_SellingPrice" layoutX="485.0" layoutY="265.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="485.0" layoutY="240.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Selling Price">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="INV_ReorderLevel" layoutX="75.0" layoutY="265.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="240.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Reorder Level">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="INV_DiscountLimit" layoutX="895.0" layoutY="135.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="895.0" layoutY="112.0" prefHeight="30.0" prefWidth="96.0"
+                                     text="Discount Limit">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="698.0" prefHeight="202.0" prefWidth="1368.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_CP_Parent" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane fx:id="pane_cashpayments" prefHeight="706.0" prefWidth="1368.0"
+                                    styleClass="mainpane--color" stylesheets="@../Stylesheets/Dashboard.css">
+                           <children>
+                              <TextField fx:id="CP_txt_InvNo" layoutX="80.0" layoutY="170.0" prefHeight="27.0"
+                                         prefWidth="180.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="80.0" layoutY="327.0" prefHeight="30.0" prefWidth="76.0"
+                                     text="Description">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="487.0" prefHeight="30.0" prefWidth="112.0"
+                                     text="Discount received">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="CP_TXT_Descp" layoutX="80.0" layoutY="357.0" prefHeight="27.0"
+                                         prefWidth="382.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="CP_TXT_CashP" layoutX="80.0" layoutY="437.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXComboBox fx:id="CP_cbo_APSupplier" layoutX="280.0" layoutY="277.0" prefHeight="25.0"
+                                           prefWidth="180.0"/>
+                              <TextField fx:id="CP_TXT_DiscRec" layoutX="80.0" layoutY="517.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXButton buttonType="RAISED" layoutX="266.0" layoutY="600.0"
+                                         onAction="#create_CashPayments" prefHeight="40.0" prefWidth="202.0"
+                                         styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                                         text="Create">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox fx:id="CP_cbo_APinv" layoutX="280.0" layoutY="171.0" prefHeight="25.0"
+                                           prefWidth="180.0"/>
+                              <JFXRadioButton fx:id="CP_rad_NewInv" layoutX="80.0" layoutY="136.0"
+                                              onAction="#toggle_NewInvoice" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="New Invoice">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="CP_rad_APInv" layoutX="280.0" layoutY="136.0"
+                                              onAction="#toggle_AP_Invoice" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="AP Invoice">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <TextField fx:id="CP_txt_NewSupplier" layoutX="82.0" layoutY="277.0" prefWidth="180.0"
+                                         styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <JFXRadioButton fx:id="CP_rad_NewSupplier" layoutX="80.0" layoutY="246.0"
+                                              onAction="#toggle_NewSupplier" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="New Supplier">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="CP_rad_APSupplier" layoutX="278.0" layoutY="246.0"
+                                              onAction="#toggle_AP_Supplier" styleClass="jfx-radio-button"
+                                              stylesheets="@../Stylesheets/Dashboard.css" text="AP Supplier">
+                                 <selectedColor>
+                                    <Color red="0.21176470816135406" blue="0.6392157077789307"/>
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="0.5098039507865906"/>
+                                 </unSelectedColor>
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </JFXRadioButton>
+                              <TableView fx:id="CP_TableView" layoutX="541.0" layoutY="78.0" prefHeight="497.0"
+                                         prefWidth="772.0" styleClass="tableview-color"
+                                         stylesheets="@../Stylesheets/Dashboard.css"/>
+                              <Label fx:id="CP_lbl_InvBalance" layoutX="174.0" layoutY="416.0" prefHeight="15.0"
+                                     prefWidth="209.0" styleClass="cashpaymentspane__lblInvBalance"
+                                     stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="12.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="408.0" prefHeight="30.0" prefWidth="76.0" text="Cash paid">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="209.0" prefHeight="30.0" prefWidth="76.0" text="Supplier">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="80.0" layoutY="98.0" prefHeight="30.0" prefWidth="103.0"
+                                     text="Invoice number">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                                     stylesheets="@../Stylesheets/Dashboard.css" text="Cash Payments">
+                                 <font>
+                                    <Font name="Futura" size="48.0"/>
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="768.0" prefHeight="194.0" prefWidth="1366.0" styleClass="bottompane"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_OwnersEquity" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                        stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <AnchorPane prefHeight="698.0" prefWidth="1368.0">
+                           <children>
+                              <Label layoutX="75.0" layoutY="374.0" prefHeight="30.0" prefWidth="96.0" text="Amount">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <TextField fx:id="OEQ_txtAmount" layoutX="75.0" layoutY="406.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="OEQ_txtNotes" layoutX="75.0" layoutY="326.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="OEQ_txtName" layoutX="75.0" layoutY="166.0" prefHeight="25.0"
+                                         prefWidth="280.0" styleClass="acctspayablepane__textfields"
+                                         stylesheets="@../Stylesheets/Dashboard.css">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </TextField>
+                              <Label layoutX="75.0" layoutY="136.0" prefHeight="30.0" prefWidth="88.0"
+                                     text="Owner Name">
+                                 <font>
+                                    <Font name="Futura" size="13.0"/>
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="502.0" onAction="#Save_OEQEntry"
+                                         prefHeight="40.0" prefWidth="202.0" styleClass="btn_create--color"
+                                         stylesheets="@../Stylesheets/Dashboard.css" text="Save">
+                                 <font>
+                                    <Font name="Quicksand Medium" size="20.0"/>
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox fx:id="OEQ_cboAcctAction" layoutX="75.0" layoutY="246.0" prefHeight="25.0"
+                                           prefWidth="280.0"/>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="698.0" prefHeight="202.0" prefWidth="1368.0"
+                                    styleClass="acctspayablepane--bottom__color"
+                                    stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Label layoutX="75.0" layoutY="216.0" prefHeight="30.0" prefWidth="121.0"
+                               text="Invest or Withdraw?">
+                           <font>
+                              <Font name="Futura" size="13.0"/>
+                           </font>
+                        </Label>
+                        <Label layoutX="75.0" layoutY="296.0" prefHeight="30.0" prefWidth="96.0" text="Notes">
+                           <font>
+                              <Font name="Futura" size="13.0"/>
+                           </font>
+                        </Label>
+                        <TableView fx:id="OEQ_tableview" layoutX="454.0" layoutY="113.0" prefHeight="542.0"
+                                   prefWidth="857.0" styleClass="tableview-color"
+                                   stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Label layoutX="75.0" layoutY="23.0" styleClass="heading--lbls"
+                               stylesheets="@../Stylesheets/Dashboard.css" text="Owners' Equity">
+                           <font>
+                              <Font name="Futura" size="50.0"/>
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <AnchorPane fx:id="pane_Dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              minWidth="-Infinity" prefHeight="900.0" prefWidth="1360.0" styleClass="mainpane--color"
+                              stylesheets="@../Stylesheets/Dashboard.css">
+                     <children>
+                        <Pane layoutX="931.0" layoutY="63.0" prefHeight="110.0" prefWidth="372.0"
+                              styleClass="panenotification__3--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="497.0" layoutY="63.0" prefHeight="110.0" prefWidth="372.0"
+                              styleClass="panenotification__2--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="33.0" layoutY="458.0" prefHeight="209.0" prefWidth="570.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="646.0" layoutY="493.0" prefHeight="174.0" prefWidth="378.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="1057.0" layoutY="493.0" prefHeight="174.0" prefWidth="277.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="646.0" layoutY="218.0" prefHeight="251.0" prefWidth="204.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="1130.0" layoutY="218.0" prefHeight="251.0" prefWidth="204.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="888.0" layoutY="218.0" prefHeight="251.0" prefWidth="204.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="63.0" layoutY="63.0" prefHeight="110.0" prefWidth="372.0"
+                              styleClass="panenotification__1--color" stylesheets="@../Stylesheets/Dashboard.css"/>
+                        <Pane layoutX="33.0" layoutY="218.0" prefHeight="209.0" prefWidth="570.0"
+                              styleClass="dashpanes--color" stylesheets="@../Stylesheets/Dashboard.css">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" height="30.0" offsetX="-6.0" offsetY="6.0" radius="14.5"
+                                          spread="0.84" width="30.0">
+                                 <color>
+                                    <Color red="0.2368421107530594" green="0.22039473056793213"
+                                           blue="0.22039473056793213" opacity="0.49000000953674316"/>
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+      <AnchorPane prefHeight="50.0" prefWidth="1366.0" styleClass="menupane--color"
+                  stylesheets="@../Stylesheets/Dashboard.css">
+         <children>
+            <JFXButton layoutX="384.0" layoutY="12.0" onAction="#GoToAccountsPayable" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Accounts Payable" AnchorPane.leftAnchor="384.0"
+                       AnchorPane.topAnchor="12.0">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="556.0" layoutY="11.0" onAction="#GoToCashPayments" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Cash Payments">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="712.0" layoutY="11.0" onAction="#GoToAccountsReceivable" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Accounts Receivable">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="909.0" layoutY="11.0" onAction="#GoToCashReceipts" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Cash Receipts">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1064.0" layoutY="11.0" onAction="#GoToCash" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Cash">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="251.0" layoutY="10.0" onAction="#GoToDashboard" styleClass="menupane__btns"
+                       stylesheets="@../Stylesheets/Dashboard.css" text="Dashboard">
+               <font>
+                  <Font name="Quicksand Medium" size="14.0"/>
+               </font>
+            </JFXButton>
+            <JFXHamburger fx:id="sidemenu_Hambi" layoutX="14.0" layoutY="17.0"
+                          stylesheets="@../Stylesheets/Dashboard.css"/>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

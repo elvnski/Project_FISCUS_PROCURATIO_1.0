@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="182.0" styleClass="sidemenu--color" stylesheets="@../Stylesheets/Dashboard.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton accessibleText="Amortization Schedule" buttonType="RAISED" layoutY="253.0" prefHeight="32.0" prefWidth="171.0" ripplerFill="WHITE" styleClass="sidemenu--buttons" stylesheets="@../Stylesheets/Dashboard.css" text="Amortization Schedule" textAlignment="JUSTIFY" textFill="WHITE" />
+      <JFXButton accessibleText="General Ledger" buttonType="RAISED" layoutY="303.0" prefHeight="32.0" prefWidth="171.0" ripplerFill="WHITE" styleClass="sidemenu--buttons" stylesheets="@../Stylesheets/Dashboard.css" text="General Ledger" textAlignment="JUSTIFY" textFill="WHITE" />
+      <JFXButton accessibleText="Inventory" buttonType="RAISED" layoutY="353.0" prefHeight="32.0" prefWidth="171.0" ripplerFill="WHITE" styleClass="sidemenu--buttons" stylesheets="@../Stylesheets/Dashboard.css" text="Inventory" textAlignment="JUSTIFY" textFill="WHITE" />
+      <JFXButton accessibleText="Owners' Equity" buttonType="RAISED" layoutY="403.0" prefHeight="32.0" prefWidth="171.0" ripplerFill="WHITE" styleClass="sidemenu--buttons" stylesheets="@../Stylesheets/Dashboard.css" text="Owners' Equity" textAlignment="JUSTIFY" textFill="WHITE" />
+   </children>
+</Pane>

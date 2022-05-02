@@ -1,0 +1,202 @@
+.menupane--color{
+  -fx-background-color: #fff;
+  -fx-border-color: #fff;
+  -fx-effect: dropshadow(gaussian, rgba(206, 206, 206, 0.3), 16.0, 0.0, -3.0, 6.0);
+
+
+}
+.menupane__btns{
+  -fx-background-color: #fff;
+  -fx-background-radius: 20;
+
+}
+.menupane__btns: hover{
+  -fx-background-color: #E3E6E8;
+}
+.menupane__btns: selected{
+  -fx-border-width: 0 0 4px 0;
+  -fx-border-color: #41A5E1;
+}
+.mainpane--color{
+  -fx-background-color: #FAFAFA;
+}
+
+.panenotification__1--color{
+  -fx-background-color:linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-effect: dropshadow(gaussian, rgba(44, 0, 64, 1), 16.0, 0.0, 0.0, 12.0);
+}
+
+.panenotification__2--color{
+  -fx-background-color:linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-effect: dropshadow(gaussian, rgba(44, 0, 64, 1), 16.0, 0.0, 0.0, 12.0);
+}
+
+.panenotification__3--color{
+  -fx-background-color:linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-effect: dropshadow(gaussian, rgba(44, 0, 64, 1), 16.0, 0.0, 0.0, 12.0);
+}
+
+.accountplot--color{
+  -fx-background-color: #fff;
+}
+
+.acctspayablepane--color{
+  -fx-background-color: #fff;
+}
+.acctspayablepane__textfields{
+  -fx-border-color: #247E84;
+  -fx-background-color: #fff;
+  -fx-border-radius: 3px;
+}
+.acctspayablepane__textfields:focused{
+  -fx-border-color:linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-background-color: #fff;
+  -fx-border-radius: 3px;
+}
+
+.dashpanes--color{
+  -fx-effect: dropshadow(gaussian, rgba(206, 206, 206, 0.4), 16.0, 0.0, -3.0, 6.0);
+  -fx-background-color: #fff;
+}
+.tableview-color{
+  -fx-effect: dropshadow(gaussian, rgba(180, 180, 180, 0.4), 16.0, 0.0, -5.0, 6.0);
+  -fx-background-color: #fff;
+}
+.cashpaymentspane--color{
+  -fx-background-color: #fff;
+}
+.cashpaymentspane__lblInvBalance{
+  -fx-text-fill: #d05a58;
+}
+
+.jfxdrawer--color{
+  -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn_create--color{
+  -fx-background-color: linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-background-radius: 10;
+  -fx-text-fill: #fff;
+}
+
+
+.jfx-snackbar-content {
+    -fx-background-color: rgba(140,104,237,0.7);
+}
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE;
+}
+.acctspayablepane--bottom__color{
+  /* -fx-background-color: linear-gradient(to bottom, rgba(77, 90, 208, 0.6), rgba(170, 104, 237, 0.8)); */
+  -fx-background-color: linear-gradient(to bottom, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+
+}
+
+.bottompane{
+  -fx-background-color: linear-gradient(to bottom, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+}
+
+.jfx-radio-button{
+  -fx-selected-color: #AA5AD0;
+  -fx-unselected-color: #D05A58;
+}
+
+
+
+
+
+.table-view{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10;
+}
+
+.table-view:focused{
+    -fx-background-color: #fff;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: #fff;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #000;
+    -fx-font-family: quicksand;
+
+}
+
+.table-view .column-header-background .filler{
+  -fx-background-color: #fff
+}
+
+.table-view .column-header {
+    -fx-background-color: #fff;
+}
+
+.table-view .column-header .label{
+-fx-text-alignment: left;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #000;
+    -fx-font-family: Futura;
+    -fx-text-alignment: center;
+}
+
+.table-view .table-column{
+  -fx-alignment: center;
+}
+
+
+.table-row-cell:odd{
+    -fx-background-color: #fff;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell{
+    -fx-background-color: #F0F3FA;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(79, 161, 173, 0.8);
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.panecash{
+  -fx-background-color: #F5F5F5;
+}
+.pane-accountsreceivable{
+  -fx-background-color: #fff;
+}
+
+.jfx-hamburger StackPane{
+  -fx-background-color: linear-gradient(to right, #4D5AD0, #8C68ED);
+  -fx-pref-width: 35px;
+  -fx-pref-height: 2px;
+}
+
+.sidemenu--color{
+  -fx-background-color: linear-gradient(to bottom right, #fff , #FAFAFA);
+
+}
+
+.sidemenu--buttons{
+  -fx-background-color: linear-gradient(to right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+  -fx-font-family: Futura;
+  -fx-alignment: center-left;
+  -fx-background-radius: 0px 20px 20px 0px;
+}
+
+.heading--lbls{
+  -fx-text-fill:linear-gradient(to bottom right, rgba(27, 0, 82, 1), rgba(130, 0, 0, 1));
+}
