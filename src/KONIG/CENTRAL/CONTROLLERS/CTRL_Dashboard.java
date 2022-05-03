@@ -328,7 +328,7 @@ public class CTRL_Dashboard implements Initializable {
             String sql7 = "TRUNCATE amortization_schedule";
             FISCUS_Connection.Database_Command.executeUpdate(sql7);
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("TRUNCATE amortization_schedule ERROR: " + ex.getMessage());
         }
 
 
@@ -375,7 +375,6 @@ public class CTRL_Dashboard implements Initializable {
 
 
         FISCUS_UI_Methods.Load_Tableview_Content(FISCUS_Connection, "accounts_payable", AP_TableView);
-
 
     }
 
@@ -448,6 +447,9 @@ public class CTRL_Dashboard implements Initializable {
             CreateSuccess.fireEvent(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("Great! Entry Saved Successfully!"), Duration.seconds(8)));
             CreateSuccess.setOnMouseClicked(event -> CreateSuccess.unregisterSnackbarContainer(pane_AccountsPayable));
 
+            /** Creating a toast */
+            FISCUS_UI_Methods.makeToast((Stage) pane_AccountsPayable.getScene().getWindow(), "Accounts Payable Updated Successfully", 8000, 1000, 1000);
+
             RefreshTableviews();
             RefreshComboBoxes();
         }
@@ -499,7 +501,7 @@ public class CTRL_Dashboard implements Initializable {
 
             BigDecimal NewBalance = CashBalance.subtract(CP_CashPaid);
 
-            String sql_New_CP_Entry = "Insert into cash_payments(date, time, invoice_ID, supplier, details, cash_paid, discount_received)" +
+            String sql_New_CP_Entry = "Insert into cash_payments(date, time, invoice_no, supplier, details, cash_paid, discount_received)" +
                     "values ('" + CP_Date + "', '" + CP_Time + "', '" + CP_Inv_No + "', '" + CP_Sup_Name + "', '" + CP_Details + "', '" + CP_CashPaid + "', '" + CP_Discount + "' )";
 
             String sql_New_Cash_Entry = "insert into cash(date, time, source, details, credit, balance)" +
@@ -538,7 +540,7 @@ public class CTRL_Dashboard implements Initializable {
                         Latest_Inv_Balance = new BigDecimal(rs.getDouble("balance_due"));
                     }
                 } catch (SQLException throwables) {
-                    System.out.println(throwables.getMessage());
+                    System.out.println("sql_getInvBal ERROR: " + throwables.getMessage());
                 }
 
                 BigDecimal New_Inv_Balance = Latest_Inv_Balance.subtract(CP_CashPaid);
@@ -577,7 +579,7 @@ public class CTRL_Dashboard implements Initializable {
 
 
                     } catch (SQLException throwables) {
-                        System.out.println(throwables.getMessage());
+                        System.out.println("Create Cash Payments ERROR:" + throwables.getMessage());
                         ;
                     }
 
@@ -610,7 +612,7 @@ public class CTRL_Dashboard implements Initializable {
                         AP_InvBalance = rs.getString("balance_due");
                     }
                 } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
+                    System.out.println("Instant_Update_CP_Fields ERROR: " + ex.getMessage());
                 }
 
                 final String APSupplier = AP_Supplier;
@@ -909,7 +911,7 @@ public class CTRL_Dashboard implements Initializable {
                         Latest_Inv_Balance = BigDecimal.valueOf(rs.getDouble("balance_due"));
                     }
                 } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
+                    System.out.println("get_Inv_Balance ERROR: " + ex.getMessage());
                 }
 
                 BigDecimal New_Inv_Balance = Latest_Inv_Balance.subtract(CR_CashRec);
@@ -943,6 +945,7 @@ public class CTRL_Dashboard implements Initializable {
 
                     } catch (SQLException ex) {
                         ex.printStackTrace();
+                        System.out.println("Instant_Update_CP_Fields SQL ERROR");
                     }
 
 
@@ -977,7 +980,7 @@ public class CTRL_Dashboard implements Initializable {
                         AR_InvBalance = rs.getString("balance_due");
                     }
                 } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
+                    System.out.println("Instant Update CR Fields SQL ERROR: " + ex.getMessage());
                 }
 
                 final String ARCustomer = AR_Customer;
@@ -1019,7 +1022,7 @@ public class CTRL_Dashboard implements Initializable {
             String sql7 = "TRUNCATE amortization_schedule";
             FISCUS_Connection.Database_Command.executeUpdate(sql7);
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("TRUNCATE amortization_schedule SQL ERROR: " + ex.getMessage());
         }
 
         BigDecimal LoanAmount;
@@ -1158,7 +1161,7 @@ public class CTRL_Dashboard implements Initializable {
                 }
 
             } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
+                System.out.println("AMORTIZATION sql error: " + ex.getMessage());
             }
             ASG_lbl_TotalIntrst.setText("KES " + InterestTotal);
             ASG_lbl_TotalEarly.setText("KES " + ExtraTotal);

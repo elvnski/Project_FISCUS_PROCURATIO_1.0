@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Database_Ops {
-    public String host = "jdbc:mysql://localhost:3306/fiscus_procuratio?allowMultiQueries=true&useUnicode=true&characterEncoding=utf8";
+    public String host = "jdbc:mysql://localhost:3306/fiscus_procuratio?allowMultiQueries=true";
     public String database_user = "root";
     public String password = "Hermano1738!";
     public Statement Database_Command;

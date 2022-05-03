@@ -209,6 +209,7 @@ public class UI_Methods {
 
 
                 TableColumn col = new TableColumn(Column_Names[i]);
+
                 col.setCellValueFactory((Callback<TableColumn.CellDataFeatures<ObservableList, String>, ObservableValue<String>>) param -> new SimpleStringProperty(param.getValue().get(j).toString()));
 
                 tableView.getColumns().addAll(col);

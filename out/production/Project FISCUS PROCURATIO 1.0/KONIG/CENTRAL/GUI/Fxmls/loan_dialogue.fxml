@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KONIG.CENTRAL.CONTROLLERS.Loan_Inventory">
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="421.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/16"
+            fx:controller="KONIG.CENTRAL.CONTROLLERS.Loan_Inventory">
    <children>
-      <TextField fx:id="LIN_Provider" layoutX="34.0" layoutY="174.0" prefHeight="25.0" prefWidth="280.0" styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
+      <TextField fx:id="LIN_Provider" layoutX="34.0" layoutY="174.0" prefHeight="25.0" prefWidth="280.0"
+                 styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </TextField>
-      <TextField fx:id="LIN_LoanNo" layoutX="34.0" layoutY="104.0" prefHeight="25.0" prefWidth="280.0" styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
+      <TextField fx:id="LIN_LoanNo" layoutX="34.0" layoutY="104.0" prefHeight="25.0" prefWidth="280.0"
+                 styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </TextField>
-      <TextField fx:id="LIN_Details" layoutX="34.0" layoutY="244.0" prefHeight="25.0" prefWidth="280.0" styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
+      <TextField fx:id="LIN_Details" layoutX="34.0" layoutY="244.0" prefHeight="25.0" prefWidth="280.0"
+                 styleClass="acctspayablepane__textfields" stylesheets="@../Stylesheets/Dashboard.css">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </TextField>
       <Label layoutX="34.0" layoutY="74.0" prefHeight="30.0" text="Loan Number">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </Label>
       <Label layoutX="37.0" layoutY="144.0" prefHeight="30.0" text="Provider">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </Label>
       <Label layoutX="34.0" layoutY="214.0" prefHeight="30.0" text="Details">
          <font>
-            <Font name="Futura" size="13.0" />
+            <Font name="Futura" size="13.0"/>
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="307.0" onAction="#Save_Loan" prefHeight="17.0" prefWidth="202.0" styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css" text="Save">
+      <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="307.0" onAction="#Save_Loan" prefHeight="17.0"
+                 prefWidth="202.0" styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                 text="Save">
          <font>
-            <Font name="Quicksand Medium" size="16.0" />
+            <Font name="Quicksand Medium" size="16.0"/>
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="126.0" layoutY="369.0" onAction="#Cancel_Entry" prefHeight="31.0" prefWidth="91.0" styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css" text="Cancel">
+      <JFXButton buttonType="RAISED" layoutX="126.0" layoutY="369.0" onAction="#Cancel_Entry" prefHeight="31.0"
+                 prefWidth="91.0" styleClass="btn_create--color" stylesheets="@../Stylesheets/Dashboard.css"
+                 text="Cancel">
          <font>
-            <Font name="Quicksand Medium" size="13.0" />
+            <Font name="Quicksand Medium" size="13.0"/>
          </font>
       </JFXButton>
    </children>
