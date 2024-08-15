@@ -255,14 +255,14 @@ public class CTRL_Dashboard implements Initializable {
             Pane Pane_SideMenu = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/KONIG/CENTRAL/GUI/Fxmls/popup_menu.fxml")));
             sideMenu.setSidePane(Pane_SideMenu);
 
-            FileInputStream input = new FileInputStream("C:/Users/Elvin/Pictures/Screenshots/DemonDean.png");
-            Image demo = new Image(input);
-            ImageView deano = new ImageView(demo);
-            Pane_SideMenu.getChildren().add(deano);
-            deano.setFitHeight(100.0);
-            deano.setFitWidth(160.0);
-            deano.setX(10);
-            deano.setY(10);
+//            FileInputStream input = new FileInputStream("C:/Users/Elvin/Pictures/Screenshots/DemonDean.png");
+//            Image demo = new Image(input);
+//            ImageView deano = new ImageView(demo);
+//            Pane_SideMenu.getChildren().add(deano);
+//            deano.setFitHeight(100.0);
+//            deano.setFitWidth(160.0);
+//            deano.setX(10);
+//            deano.setY(10);
 
             /** Assigning actions for the popup side-menu buttons */
             for (Node node : Pane_SideMenu.getChildren()) {
