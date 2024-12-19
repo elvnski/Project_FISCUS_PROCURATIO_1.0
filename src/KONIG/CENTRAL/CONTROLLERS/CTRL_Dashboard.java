@@ -361,6 +361,7 @@ public class CTRL_Dashboard implements Initializable {
         FISCUS_UI_Methods.Initialize_ComboBox("Select invoice_no from accounts_receivable", FISCUS_Connection, CR_cbo_ARinv, "invoice_no");
         FISCUS_UI_Methods.Initialize_ComboBox("Select customer_name from accounts_receivable", FISCUS_Connection, CR_cbo_ARClient, "customer_name");
 
+        System.out.println("Comboboxes refreshed");
     }
 
     public void RefreshTableviews() {
